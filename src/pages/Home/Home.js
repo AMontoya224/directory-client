@@ -11,7 +11,7 @@ function Home(props) {
             <title>Directorio | Home</title>
             <main>
                 <section className='one'>
-                    <p>Home 2da</p>
+                    <p>Home 3ra</p>
                 </section>
 
                 <section className='two'>
