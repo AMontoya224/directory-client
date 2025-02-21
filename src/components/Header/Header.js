@@ -1,19 +1,33 @@
 import React from 'react';
-import { withRouter } from 'react-router-dom';
+import {Link} from 'react-router-dom';
 import './Header.css';
 
 
 function Header(props) {
-    const {selectLan} = props;
+    const {selectLan, onSelectLan} = props;
+
+    const onLang = () => {
+        if(!selectLan){
+            onSelectLan( true );
+        }
+        else{
+            onSelectLan( false );
+        }
+    };
 
     return (
         <div className='Header'>
-            <button title={selectLan ? 'Theme' : 'Tema'}>boton</button>
-            <p>{selectLan ? 'Invest' : 'Invierte'}</p>
-            <a href='mailto:montyang224@gmail.com?subject=Quiero contactar con ustedes'>{selectLan ? 'Contact' : 'Contacta'}</a>
-            <button title={selectLan ? 'Translate' : 'Traducción'}>boton</button>
+            <button className='button-primary'><span className="material-symbols-rounded">search</span></button>
+            <nav>
+                <Link to='/'><p>{selectLan ? 'Home' : 'Inicio'}</p></Link>
+                <Link to='/persons'><p>{selectLan ? 'Persons' : 'Personas'}</p></Link>
+                <Link to='/organizations'><p>{selectLan ? 'Organizations' : 'Organizaciones'}</p></Link>
+                <Link to='/projects'><p>{selectLan ? 'Projects' : 'Proyectos'}</p></Link>
+                <Link to='/publications'><p>{selectLan ? 'Publications' : 'Publicaciones'}</p></Link>
+            </nav>
+            <button onClick={onLang}><span className="material-symbols-rounded">language</span><p>{selectLan ? 'English' : 'Español'}</p></button>
         </div>
     );
 }
 
-export default withRouter( Header );
+export default Header;

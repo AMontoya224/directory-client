@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;800&display=swap');
+
+:root{
+    --background: #ffffff;
+    --background-container1: #1363D0;
+    --background-container2: #E8F2F7;
+    --background-section1: #F2F9FF;
+    --background-section2: #EEF3FB;
+    --background-section3: #F4F8FB;
+    --background-section4: #F6F9FC;
+    --background-footer: #26292E;
+
+    --text: #26292E;
+    --text-alternative: #ffffff;
+    --text-alternative1: #555869;
+    --text-alternative2: #979797;
+
+    --button: #0056AC;
+    --button-hover: #184397;
+    --button-disabled: #DEE3EA;
+    --button-alternative: #5D2EE5;
+
+    --border: #26292E;
+    --border-disabled: #DEE3EA;
+
+    --focus: #FFD147;
+
+    --red: #BF0909;
+    --red1: #DC362E;
+    --red2: #E46962;
+    --red3: #EB918E;
+    --red4: #F2B8B5;
+    --red5: #F9DEDC;
+    --red6: #FCEEEE;
+
+    --gray: #26292E;
+    --gray1: #3C3E43;
+    --gray2: #515458;
+    --gray3: #7D7F82;
+    --gray4: #979797;
+    --gray5: #26292E;
+    --gray6: #BEBFC0;
+    --gray7: #E9EAEA;
+    --gray8: #FFFFFF;
+
+    --neutral: #0D1028;
+    --neutral1: #3D4053;
+    --neutral2: #555869;
+    --neutral3: #656A8A;
+    --neutral4: #8A94A2;
+    --neutral5: #C5CDDA;
+    --neutral6: #D4DDEC;
+    --neutral7: #DEE3EA;
+    --neutral8: #EEF3FB;
+    --neutral9: #EDF0F4;
+    --neutral10: #F6F9FC;
+
+    --blue: #184397;
+    --blue1: #0056AC;
+    --blue2: #1363D0;
+    --blue3: #0071E3;
+    --blue4: #4597E8;
+    --blue5: #E1F0FF;
+    --blue6: #E8F2F7;
+    --blue7: #EEF3FB;
+    --blue8: #F2F9FF;
+    --blue9: #F4F8FB;
+
+    --green: #126B49;
+    --orange: #D75600;
+    --yellow: #997300;
+    --indigo: #2A2D59;
+    --purple: #331980;
+    --strawberry: #D20042;
+    --skyblue: #0995AD;
+
+    --t: 1px solid red;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    appearance: none;
+    border: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 16px;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    letter-spacing: 0rem;
+    background: var(--color-background);
+    color: var(--color-white);
+    user-select: auto;
+    overflow: auto;
+}
+::-webkit-scrollbar {
+    display: none;
+}
+
+h1{
+    font-weight: 800;
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+}
+
+h2{
+    font-weight: 700;
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+}
+
+h3{
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 2rem;
+}
+
+h4{
+    font-weight: 700;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+}
+
+h5{
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.38rem;
+}
+
+button{
+    font-weight: 700;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+}
+
+.button-primary{
+    border: none;
+    font-weight: 700;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    padding: 1rem 1.5rem;
+    max-width: 14rem;
+    border-radius: .25rem;
+    background: var(--button);
+    color: var(--text-alternative);
+    cursor: pointer;
+    transition: all 350ms ease;
+}
+.button-primary:hover{
+    background: var(--button-hover);
+}
+.button-primary:disabled{
+    background: var(--button-disabled);
+    color: var(--text-alternative1);
+    cursor: not-allowed;
+}
+.button-primary:focus{
+    border: 1px solid var(--focus);
+}
+
+
+@media only screen and (max-width: 640px){
+    h1{
+        font-size: 1.875rem;
+        line-height: 2.5rem;
+    }
+    
+    h2{
+        font-size: 1.5rem;
+        line-height: 1.5rem;
+    }
+    
+    h3{
+        font-size: 1.25rem;
+        line-height: 1.75rem;
+    }
+    
+    h4{
+        font-size: 1rem;
+        line-height: 1.38rem;
+    }
+    
+    h5{
+        font-size: 1rem;
+        line-height: 1.38rem;
+    }
+
+    button{
+        font-weight: 700;
+        font-size: 1rem;
+        line-height: 1.38rem;
+    }
+}

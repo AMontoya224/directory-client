@@ -1,5 +1,4 @@
 import React from 'react';
-import { withRouter } from 'react-router-dom';
 import './Home.css';
 
 
@@ -8,7 +7,7 @@ function Home(props) {
 
     return (
         <div className='Home'>
-            <title>Directorio | Home</title>
+            <title>{selectLan ? 'DefCRIS | Home' : 'DefCRIS | Inicio'}</title>
             <main>
                 <section className='one'>
                     <p>Home 3ra</p>
@@ -43,4 +42,4 @@ function Home(props) {
   );
 }
 
-export default withRouter(Home);
+export default Home;
