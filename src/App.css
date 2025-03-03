@@ -155,6 +155,7 @@ button{
     background: var(--button);
     color: var(--text-alternative);
     cursor: pointer;
+    border: 1px solid transparent;
     transition: all 350ms ease;
 }
 .button-primary:hover{
@@ -169,6 +170,15 @@ button{
     border: 1px solid var(--focus);
 }
 
+.button-secundary{
+    height: 35px;
+    background: transparent;
+    vertical-align: middle;
+    color: var(--text-alternative);
+}
+.button-secundary > span{
+    vertical-align: middle;
+}
 
 @media only screen and (max-width: 640px){
     h1{

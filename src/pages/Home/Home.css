@@ -1,0 +1,34 @@
+.Home > main > section{
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    padding-top: 150px;
+}
+
+.Home > main > section > img{
+    position: absolute;
+    top: 0;
+    height: 120vh;
+    width: 100vw;
+    margin-top: -200px;
+    z-index: -1;
+}
+
+.Home > main > section > div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    margin-top: 150px;
+}
+
+.Home > main > section > div > img{
+    width: 160px;
+    border-radius: 5px;
+}
+
+.Home > main > section > div > h1{
+    color: var(--text-alternative);
+    text-align: center;
+    font-size: 6rem;
+}

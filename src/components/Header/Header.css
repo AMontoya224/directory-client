@@ -1,20 +1,164 @@
 .Header{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    color: white;
 }
 
-.Header > nav{
+.Header > section{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    width: 100vw;
+    height: 100px;
+    transition: all 350ms ease;
 }
 
-.Header > nav > a{
-    text-decoration: none;
-    color: black;
+.Header > section:first-child{
+    height: 35px;
+    align-items: start;
+}
+.Header > section:first-child.active{
+    height: 200px;
+}
+
+.Header > section:nth-child(2){
+    position: fixed;
+    top: 35px;
+    z-index: 999;
+}
+.Header > section:nth-child(2).active{
+    top: 200px;
+}
+
+.Header > section > div{
+    flex: 1;
+}
+
+.Header > section > div > div > button{
+    flex: 1;
+}
+
+.Header > section > div > div > form{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex: 5;
+    visibility: hidden;
+
+}
+.Header > section > div > div > form.active{
+    visibility: visible;
+}
+
+.Header > section > div > div > form > input{
+    width: 400px;
+    height: 22px;
+    border-radius: 2px;
+    margin-right: 5px;
+}
+
+.Header > section > div:first-child{
+    position: relative;
+    background: rgba(0, 0, 0, .3);
+    height: 100%;
+    width: 100%;
+}
+
+.Header > section > div:first-child > div{
+    visibility: hidden;
+}
+
+.Header > section > div:first-child > div.active{
+    visibility: visible;
+}
+
+.Header > section > div:nth-child(2) > div:first-child{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 50px;
+}
+
+.Header > section > div:nth-child(2) > .spc{
+    width: 100%;
+    height: 0px;
+    background: rgba(0, 0, 0, .3);
     transition: all 350ms ease;
-    border: var(--t);
+    visibility: hidden;
+}
+.Header > section > div:nth-child(2) > .spc.active{
+    visibility: visible;
+    height: 165px;
+}
+
+.Header > section > div:nth-child(2) > .spc > p{
+    visibility: hidden;
+}
+.Header > section > div:nth-child(2) > .spc.active > p{
+    visibility: visible;
+}
+
+.Header > section > div:first-child > p{
+    height: 35px;
+    padding-top: 5px;
+}
+.Header > section > div:first-child > p::after{
+    content:"";
+    position: absolute;
+    right: -36px;
+    top: -1px;
+    border-right: 18px solid transparent;
+    border-top: 18px solid transparent;
+    border-bottom: 18px solid rgba(0, 0, 0, .3);
+    border-left: 18px solid rgba(0, 0, 0, .3);
+}
+
+.Header > section > div:first-child > p > img{
+    width: 15px;
+    border-radius: 1px;
+    margin: 0 10px;
+}
+
+.Header > section > div:first-child > p > span{
+    text-decoration: underline;
+    color: var(--button);
+    cursor: pointer;
+    transition: all 350ms ease;
+    margin-left: 5px;
+}
+.Header > section > div:first-child > p > span:hover{
+    color: var(--button-hover);
+}
+
+.Header > section > nav{
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.Header > section > nav > a{
+    text-decoration: none;
+    color: var(--button);
+    transition: all 350ms ease;
+}
+.Header > section > nav > a:hover{
+    color: var(--button-hover);
+}
+
+.Header > section > nav > a:first-child > div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+.Header > section > nav > a:first-child > div > img{
+    width: 70px;
+    border-radius: 3px;
 }
