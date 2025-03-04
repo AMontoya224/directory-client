@@ -1,5 +1,6 @@
 .Organizations > main{
-    height: 100vh;
     width: 100vw;
+    min-height: 100vh;
     padding-top: 150px;
+    background: var(--background);
 }

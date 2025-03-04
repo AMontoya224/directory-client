@@ -12,12 +12,13 @@
     justify-content: space-between;
     align-items: center;
     width: 100vw;
-    height: 100px;
+    height: 150px;
+    border: var(--t);
     transition: all 350ms ease;
 }
 
 .Header > section:first-child{
-    height: 35px;
+    height: 40px;
     align-items: start;
 }
 .Header > section:first-child.active{
@@ -28,17 +29,34 @@
     position: fixed;
     top: 35px;
     z-index: 999;
+    mix-blend-mode: difference;
 }
 .Header > section:nth-child(2).active{
     top: 200px;
 }
+.Header > section:nth-child(2).roll{
+    backdrop-filter: blur(5px);
+}
 
 .Header > section > div{
-    flex: 1;
+    flex: 2;
 }
 
 .Header > section > div > div > button{
     flex: 1;
+}
+
+.Header > section > div > div > a{
+    text-decoration: none;
+    color: var(--text-alternative);
+    transition: all 350ms ease;
+    height: 35px;
+    vertical-align: middle;
+    padding-top: 7px;
+    padding: 7px 1.5rem;
+}
+.Header > section > div > div > a:hover{
+    opacity: .7;
 }
 
 .Header > section > div > div > form{
@@ -54,15 +72,16 @@
 }
 
 .Header > section > div > div > form > input{
-    width: 400px;
+    width: 17vw;
     height: 22px;
     border-radius: 2px;
     margin-right: 5px;
 }
 
 .Header > section > div:first-child{
+    flex: 3;
     position: relative;
-    background: rgba(0, 0, 0, .3);
+    background: rgba(0, 0, 0, .2);
     height: 100%;
     width: 100%;
 }
@@ -85,13 +104,11 @@
 
 .Header > section > div:nth-child(2) > .spc{
     width: 100%;
-    height: 0px;
-    background: rgba(0, 0, 0, .3);
+    height: 5px;
+    background: rgba(0, 0, 0, .2);
     transition: all 350ms ease;
-    visibility: hidden;
 }
 .Header > section > div:nth-child(2) > .spc.active{
-    visibility: visible;
     height: 165px;
 }
 
@@ -104,7 +121,7 @@
 
 .Header > section > div:first-child > p{
     height: 35px;
-    padding-top: 5px;
+    padding-top: 10px;
 }
 .Header > section > div:first-child > p::after{
     content:"";
@@ -113,8 +130,8 @@
     top: -1px;
     border-right: 18px solid transparent;
     border-top: 18px solid transparent;
-    border-bottom: 18px solid rgba(0, 0, 0, .3);
-    border-left: 18px solid rgba(0, 0, 0, .3);
+    border-bottom: 18px solid rgba(0, 0, 0, .2);
+    border-left: 18px solid rgba(0, 0, 0, .2);
 }
 
 .Header > section > div:first-child > p > img{
@@ -125,13 +142,12 @@
 
 .Header > section > div:first-child > p > span{
     text-decoration: underline;
-    color: var(--button);
     cursor: pointer;
     transition: all 350ms ease;
     margin-left: 5px;
 }
 .Header > section > div:first-child > p > span:hover{
-    color: var(--button-hover);
+    opacity: .7;
 }
 
 .Header > section > nav{
@@ -144,21 +160,22 @@
 
 .Header > section > nav > a{
     text-decoration: none;
-    color: var(--button);
+    color: var(--text-alternative);
     transition: all 350ms ease;
 }
 .Header > section > nav > a:hover{
-    color: var(--button-hover);
+    opacity: .7;
 }
 
 .Header > section > nav > a:first-child > div{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    text-align: center;
     gap: 15px;
 }
 
 .Header > section > nav > a:first-child > div > img{
-    width: 70px;
+    width: 60px;
     border-radius: 3px;
 }

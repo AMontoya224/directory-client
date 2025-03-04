@@ -142,6 +142,8 @@ button{
     font-weight: 700;
     font-size: 1.25rem;
     line-height: 1.75rem;
+    cursor: pointer;
+    transition: all 350ms ease;
 }
 
 .button-primary{
@@ -154,9 +156,7 @@ button{
     border-radius: .25rem;
     background: var(--button);
     color: var(--text-alternative);
-    cursor: pointer;
     border: 1px solid transparent;
-    transition: all 350ms ease;
 }
 .button-primary:hover{
     background: var(--button-hover);
@@ -175,6 +175,9 @@ button{
     background: transparent;
     vertical-align: middle;
     color: var(--text-alternative);
+}
+.button-secundary:hover{
+    opacity: .7;
 }
 .button-secundary > span{
     vertical-align: middle;

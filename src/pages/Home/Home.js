@@ -1,6 +1,6 @@
 import React from 'react';
 import './Home.css';
-import portada from './../../images/portada.jpeg';
+import portada from './../../images/portada.jpg';
 import flag from './../../images/flag_peru.png';
 
 

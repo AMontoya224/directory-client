@@ -5,9 +5,11 @@ import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import Home from './pages/Home/Home';
 import Persons from './pages/Persons/Persons';
-import Organizations from './pages/Organizations/Organizations';
 import Projects from './pages/Projects/Projects';
+import Organizations from './pages/Organizations/Organizations';
 import Publications from './pages/Publications/Publications';
+import Login from './pages/Login/Login';
+import Register from './pages/Register/Register';
 
 
 function App() {
@@ -25,9 +27,11 @@ function App() {
         <Switch>
           <Route exact path="/" render={ routeProps => <Home selectLan={selectLan} {...routeProps} />}/>
           <Route exact path="/persons" render={ routeProps => <Persons selectLan={selectLan} {...routeProps} />}/>
-          <Route exact path="/organizations" render={ routeProps => <Organizations selectLan={selectLan} {...routeProps} />}/>
           <Route exact path="/projects" render={ routeProps => <Projects selectLan={selectLan} {...routeProps} />}/>
+          <Route exact path="/organizations" render={ routeProps => <Organizations selectLan={selectLan} {...routeProps} />}/>
           <Route exact path="/publications" render={ routeProps => <Publications selectLan={selectLan} {...routeProps} />}/>
+          <Route exact path="/login" render={ routeProps => <Login selectLan={selectLan} {...routeProps} />}/>
+          <Route exact path="/register" render={ routeProps => <Register selectLan={selectLan} {...routeProps} />}/>
         </Switch>
         <Footer selectLan={selectLan}/>
       </BrowserRouter>

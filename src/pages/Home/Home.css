@@ -2,11 +2,12 @@
     position: relative;
     height: 100vh;
     width: 100vw;
-    padding-top: 150px;
+    padding-top: 130px;
 }
 
 .Home > main > section > img{
     position: absolute;
+    filter: brightness(70%); 
     top: 0;
     height: 120vh;
     width: 100vw;
@@ -23,7 +24,7 @@
 }
 
 .Home > main > section > div > img{
-    width: 160px;
+    width: 180px;
     border-radius: 5px;
 }
 

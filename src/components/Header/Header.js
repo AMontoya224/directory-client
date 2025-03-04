@@ -8,7 +8,7 @@ function Header(props) {
     const {selectLan, onSelectLan} = props;
     const [active, setActive] = useState( false );
     const [search, setSearch] = useState( false );
-    const [setting, setSetting] = useState( false );
+    //const [roll, setRoll] = useState( false );
     let url = useLocation().pathname;
 
     const onActive = () => {
@@ -39,12 +39,11 @@ function Header(props) {
     };
 
     const onSetting = () => {
-        if(!setting){
-            setSetting( true );
-        }
-        else{
-            setSetting( false );
-        }
+        selectLan ? alert('Settings not yet implemented') : alert('Configuración aún no implementado');
+    };
+
+    const onAnalysis = () => {
+        selectLan ? alert('AI not yet implemented') : alert('IA aún no implementada');
     };
 
     return (
@@ -58,11 +57,13 @@ function Header(props) {
                 </div>
                 <div>
                     <div>
+                        <button className='button-secundary' onClick={onAnalysis}><span className="material-symbols-rounded">neurology</span></button>
                         <form className={search ? 'active' : ''}>
                             <input></input>
                             <button className='button-secundary'><span className="material-symbols-rounded">send</span></button>
                         </form>
                         <button className='button-secundary' onClick={onSearch}><span className="material-symbols-rounded">{search ? 'close' : 'search'}</span></button>
+                        <Link to='/login'><span className="material-symbols-rounded">login</span></Link>
                         <button className='button-secundary' onClick={onLanguage}><span className="material-symbols-rounded">language</span></button>
                         <button className='button-secundary' onClick={onSetting}><span className="material-symbols-rounded">settings</span></button>
                     </div>
@@ -73,11 +74,12 @@ function Header(props) {
             </section>
             <section className={active ? 'active' : ''}>
                 <nav>
-                    <Link to='/' style={url==='/' ? {display : 'none'} : {display : 'block'}}><div><img src={flag} alt='flag'/><h3>{selectLan ? 'DefCRIS.gob.pe' : 'DefCRIS.gob.pe'}</h3></div></Link>
+                    <Link to='/' style={url==='/' ? {display : 'none'} : {display : 'block'}}><div><img className='flag' src={flag} alt='flag'/><h3>{selectLan ? 'DefCRIS.gob.pe' : 'DefCRIS.gob.pe'}</h3></div></Link>
                     <Link to='/persons'><h3>{selectLan ? 'Persons' : 'Personas'}</h3></Link>
                     <Link to='/organizations'><h3>{selectLan ? 'Organizations' : 'Organizaciones'}</h3></Link>
                     <Link to='/projects'><h3>{selectLan ? 'Projects' : 'Proyectos'}</h3></Link>
                     <Link to='/publications'><h3>{selectLan ? 'Publications' : 'Publicaciones'}</h3></Link>
+                    {/*<Link to='/publications'><div><span className="material-symbols-rounded">menu_book</span><h3>{selectLan ? 'Publications' : 'Publicaciones'}</h3><p>15785</p></div></Link>*/}
                 </nav>
             </section>
         </div>

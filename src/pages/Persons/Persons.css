@@ -1,5 +1,28 @@
 .Persons > main{
-    height: 100vh;
     width: 100vw;
-    padding-top: 150px;
+    min-height: 100vh;
+    padding: 10rem 3rem 0 3rem;
+    background: var(--background);
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: flex-start;
+}
+
+.Persons > main > section{
+    width: 100%;
+    border: var(--t);
+}
+
+.Persons > main > section:first-child{
+    width: 18%;
+    position: fixed;
+    top: 200px;
+    left: 3rem;
+    background: var(--background-section4);
+}
+
+.Persons > main > section:nth-child(2){
+    width: 80%;
+    height: 100%;
 }
