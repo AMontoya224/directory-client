@@ -14,8 +14,14 @@ function Home(props) {
                 <section className='one'>
                     <img src={portada} alt='portada'/>
                     <div>
-                        <img className='header-flag' src={flag} alt='flag'/>
-                        <h1>DefCRIS.gob.pe</h1>
+                        <div>
+                            <img className='header-flag' src={flag} alt='flag'/>
+                            <h1>DefCRIS.gob.pe</h1>
+                        </div>
+                        <form>
+                            <input placeholder='Buscar en el repositorio...'></input>
+                            <button className='button-secundary'><span className="material-symbols-rounded">send</span></button>
+                        </form>
                     </div>
                 </section>
 

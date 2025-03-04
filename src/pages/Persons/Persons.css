@@ -1,28 +1,83 @@
 .Persons > main{
     width: 100vw;
     min-height: 100vh;
-    padding: 10rem 3rem 0 3rem;
+    padding: 10rem 0;
     background: var(--background);
     display: flex;
-    flex-direction: row;
-    justify-content: end;
-    align-items: flex-start;
-}
-
-.Persons > main > section{
-    width: 100%;
-    border: var(--t);
+    flex-direction: column;
+    justify-content: start;
+    align-items: end;
 }
 
 .Persons > main > section:first-child{
-    width: 18%;
-    position: fixed;
-    top: 200px;
-    left: 3rem;
-    background: var(--background-section4);
+    width: 100%;
+    height: 12rem;
+    background: var(--gray7);
+    padding: 2rem 3rem 1rem 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .Persons > main > section:nth-child(2){
-    width: 80%;
+    width: 18%;
+    position: fixed;
+    top: 25.4rem;
+    left: 3rem;
+    border-radius: .3rem;
+    background: var(--background-section4);
+}
+
+.Persons > main > section:nth-child(3){
+    width: 75vw;
     height: 100%;
+    margin: 0 3rem 1rem 3rem;
+}
+
+.Persons > main > section:first-child > form{
+    width: 21.5vw;
+    display: flex;
+    height: 5rem;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.Persons > main > section:first-child > form > input{
+    width: 100%;
+    height: 2rem;
+    border-radius: 0.3rem;
+    padding: 1rem;
+}
+
+.Persons > main > section:first-child > form > button{
+    height: 100%;
+}
+
+.Persons > main > section:first-child > form > button > span{
+    font-size: 48px;
+}
+
+.Persons > main > section > .container{
+    display: inline-block;
+    margin: 1rem;
+}
+
+.Persons > main > section > .container > div{
+    width: 22rem;
+    height: 12rem;
+    background: var(--blue5);
+    border-radius: .3rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.Persons > main > section > .container > div > span{
+    font-size: 128px;
+    border: var(--t);
 }

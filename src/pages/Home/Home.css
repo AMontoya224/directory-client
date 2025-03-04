@@ -17,19 +17,50 @@
 
 .Home > main > section > div{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 50px;
-    margin-top: 150px;
+    gap: 5rem;
+    margin-top: 10rem;
 }
 
-.Home > main > section > div > img{
-    width: 180px;
-    border-radius: 5px;
+.Home > main > section > div > div{
+    width: 35vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.Home > main > section > div > h1{
+.Home > main > section > div > div > img{
+    width: 10rem;
+    border-radius: 0.3rem;
+}
+
+.Home > main > section > div > div > h1{
     color: var(--text-alternative);
     text-align: center;
-    font-size: 6rem;
+    font-size: 4rem;
+}
+
+.Home > main > section > div > form{
+    width: 35vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Home > main > section > div > form > input{
+    width: 37rem;
+    height: 3rem;
+    border-radius: 0.3rem;
+    padding: 1rem;
+    font-size: 1.4rem;
+}
+
+.Home > main > section > div > form > button{
+    height: 100%;
+}
+
+.Home > main > section > div > form > button > span{
+    font-size: 64px;
 }
