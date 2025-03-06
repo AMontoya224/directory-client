@@ -1,4 +1,4 @@
-import {React, useState } from 'react';
+import {React, useEffect, useState } from 'react';
 import {Link, useLocation} from 'react-router-dom';
 import './Header.css';
 import flag from './../../images/flag_peru.png';
@@ -8,8 +8,9 @@ function Header(props) {
     const {selectLan, onSelectLan} = props;
     const [active, setActive] = useState( false );
     const [search, setSearch] = useState( false );
-    //const [roll, setRoll] = useState( false );
+    const [roll, setRoll] = useState( false );
     let url = useLocation().pathname;
+    const [y, setY] = useState(window.scrollY);
 
     const onActive = () => {
         if(!active){
@@ -46,6 +47,18 @@ function Header(props) {
         selectLan ? alert('AI not yet implemented') : alert('IA aún no implementada');
     };
 
+    useEffect(() => {
+        const handleNavigation = (e) => {
+          // Scroll direction logic
+          setY(y+1);
+          console.log(e)
+        };
+      
+        window.addEventListener("scroll", handleNavigation);
+      
+        return () => window.removeEventListener("scroll", handleNavigation);
+      }, [y]);
+
     return (
         <div className='Header'>
             <section className={active ? 'active' : ''}>
@@ -72,7 +85,7 @@ function Header(props) {
                     </div>
                 </div>
             </section>
-            <section className={active ? 'active' : ''}>
+            <section className={active ? 'active roll' : 'roll'}>
                 <nav>
                     <Link to='/' style={url==='/' ? {display : 'none'} : {display : 'block'}}><div><img className='flag' src={flag} alt='flag'/><h3>{selectLan ? 'DefCRIS.gob.pe' : 'DefCRIS.gob.pe'}</h3></div></Link>
                     <Link to='/persons'><h3>{selectLan ? 'Persons' : 'Personas'}</h3></Link>

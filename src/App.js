@@ -5,6 +5,7 @@ import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import Home from './pages/Home/Home';
 import Persons from './pages/Persons/Persons';
+import PersonID from './pages/Persons/PersonID';
 import Projects from './pages/Projects/Projects';
 import Organizations from './pages/Organizations/Organizations';
 import Publications from './pages/Publications/Publications';
@@ -27,6 +28,7 @@ function App() {
         <Switch>
           <Route exact path="/" render={ routeProps => <Home selectLan={selectLan} {...routeProps} />}/>
           <Route exact path="/persons" render={ routeProps => <Persons selectLan={selectLan} {...routeProps} />}/>
+          <Route exact path="/persons/:_name" render={ routeProps => <PersonID selectLan={selectLan} {...routeProps} />}/>
           <Route exact path="/projects" render={ routeProps => <Projects selectLan={selectLan} {...routeProps} />}/>
           <Route exact path="/organizations" render={ routeProps => <Organizations selectLan={selectLan} {...routeProps} />}/>
           <Route exact path="/publications" render={ routeProps => <Publications selectLan={selectLan} {...routeProps} />}/>

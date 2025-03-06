@@ -1,3 +1,4 @@
+/*PERSONS*/
 .Persons > main{
     width: 100vw;
     min-height: 100vh;
@@ -79,5 +80,35 @@
 
 .Persons > main > section > .container > div > span{
     font-size: 128px;
+    border: var(--t);
+}
+
+.Persons > main > section > .container > div > div > h4{
+    cursor: pointer;
+    transition: all 350ms ease;
+}
+.Persons > main > section > .container > div > div > h4:hover{
+    opacity: .7;
+}
+
+
+/*PERSON ID*/
+.PersonID > main{
+    width: 100vw;
+    min-height: 100vh;
+    padding: 10rem 0;
+    background: var(--background);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+.PersonID > main > section{
+    flex: 1;
+    width: 100%;
+    min-height: 50vh;
+    padding: 3rem;
     border: var(--t);
 }

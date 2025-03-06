@@ -5,6 +5,10 @@ import './Persons.css';
 function Persons(props) {
     const {selectLan} = props;
 
+    const onPerson = (url) => {
+        props.history.push('/persons' + url);
+    };
+    
     return (
         <div className='Persons'>
             <title>{selectLan ? 'DefCRIS | Persons' : 'DefCRIS | Personas'}</title>
@@ -35,7 +39,7 @@ function Persons(props) {
                         <div>
                             <span className="material-symbols-rounded">person</span>
                             <div>
-                                <h4>Ing. Juan Andres Montoya Angulo</h4>
+                                <h4 onClick={() => onPerson('/juan-andres-montoya-angulo')}>Ing. Juan Andres Montoya Angulo</h4>
                                 <a href='/#'>Universidad Nacional de San Agustín</a>
                                 <b> - INVESTIGADOR</b>
                                 <p>Dato importante</p>
