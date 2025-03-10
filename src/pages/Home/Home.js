@@ -5,11 +5,12 @@ import flag from './../../images/flag_peru.png';
 
 
 function Home(props) {
-    const {selectLan} = props;
+    const {selectLan, setTheme} = props;
 
     useEffect(() => {
         window.scrollTo(0, 0);
-    }, [])
+        setTheme(false);
+    }, [setTheme]);
 
     return (
         <div className='Home'>

@@ -12,7 +12,7 @@
     justify-content: space-between;
     align-items: center;
     width: 100vw;
-    transition: all 350ms ease;
+    transition: all 250ms ease;
     z-index: 999;
 }
 
@@ -36,9 +36,11 @@
 .Header > section:nth-child(2).roll{
     background: rgba(0, 0, 0, 0.7);
     filter: none;
-    color: var(--text-alternative);
     height: 70px;
     top: 0;
+}
+.Header > section:nth-child(2).roll h3{
+    color: var(--text-alternative);
 }
 
 .Header > section > div{
@@ -52,7 +54,7 @@
 .Header > section > div > div > a{
     text-decoration: none;
     color: var(--text-alternative);
-    transition: all 350ms ease;
+    transition: all 250ms ease;
     height: 35px;
     vertical-align: middle;
     padding-top: 7px;
@@ -60,6 +62,9 @@
 }
 .Header > section > div > div > a:hover{
     opacity: .7;
+}
+.Header > section > div > div.active span{
+    color: var(--text);
 }
 
 .Header > section > div > div > form{
@@ -109,7 +114,7 @@
     width: 100%;
     height: 5px;
     background: rgba(0, 0, 0, .2);
-    transition: all 350ms ease;
+    transition: all 250ms ease;
 }
 .Header > section > div:nth-child(2) > .spc.active{
     height: 165px;
@@ -146,7 +151,7 @@
 .Header > section > div:first-child > p > span{
     text-decoration: underline;
     cursor: pointer;
-    transition: all 350ms ease;
+    transition: all 250ms ease;
     margin-left: 5px;
 }
 .Header > section > div:first-child > p > span:hover{
@@ -164,10 +169,14 @@
 .Header > section > nav > a{
     text-decoration: none;
     color: var(--text-alternative);
-    transition: all 350ms ease;
+    transition: all 250ms ease;
 }
 .Header > section > nav > a:hover{
-    opacity: .7;
+    transform: scale(1.25);
+}
+
+.Header > section > nav.active h3{
+    color: var(--text);
 }
 
 .Header > section > nav > a:first-child > div{

@@ -5,36 +5,45 @@ import flag from './../../images/flag_peru.png';
 
 
 function Header(props) {
-    const {selectLan, onSelectLan, setActive, active, y} = props;
-    const [search, setSearch] = useState( false );
+    const {selectLan, setSelectLan, setActive, active, y, theme} = props;
+    const [search, setSearch] = useState(false);
     let url = useLocation().pathname;
     
     const onActive = () => {
         if(!active){
-            setActive( true );
+            setActive(true);
         }
         else{
-            setActive( false );
+            setActive(false);
         }
     };
 
     const onSearch = () => {
         if(!search){
-            setSearch( true );
+            setSearch(true);
         }
         else{
-            setSearch( false );
+            setSearch(false);
         }
     };
 
     const onLanguage = () => {
         if(!selectLan){
-            onSelectLan( true );
+            setSelectLan(true);
         }
         else{
-            onSelectLan( false );
+            setSelectLan(false);
         }
     };
+
+    /*const onTheme = () => {
+        if(!theme){
+            setTheme(true);
+        }
+        else{
+            setTheme(false);
+        }
+    };*/
 
     const onSetting = () => {
         selectLan ? alert('Settings not yet implemented') : alert('Configuración aún no implementado');
@@ -54,7 +63,7 @@ function Header(props) {
                     </div>
                 </div>
                 <div>
-                    <div>
+                    <div className={theme ? 'active' : ''}>
                         <button className='button-secundary' onClick={onAnalysis}><span className="material-symbols-rounded">neurology</span></button>
                         <form className={search ? 'active' : ''}>
                             <input></input>
@@ -71,7 +80,7 @@ function Header(props) {
                 </div>
             </section>
             <section className={`${active ? 'active' : ''} ${y >= 10 ? 'roll' : ''}`}>
-                <nav>
+                <nav className={theme ? 'active' : ''}>
                     <Link to='/' style={url==='/' ? {display : 'none'} : {display : 'block'}}><div><img className='flag' src={flag} alt='flag'/><h3>{selectLan ? 'DefCRIS.gob.pe' : 'DefCRIS.gob.pe'}</h3></div></Link>
                     <Link to='/persons'><h3>{selectLan ? 'Persons' : 'Personas'}</h3></Link>
                     <Link to='/projects'><h3>{selectLan ? 'Projects' : 'Proyectos'}</h3></Link>

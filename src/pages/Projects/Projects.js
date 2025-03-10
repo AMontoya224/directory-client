@@ -4,15 +4,16 @@ import portada from './../../images/proyectos.jpg';
 
 
 function Projects(props) {
-    const {selectLan} = props;
+    const {selectLan, setTheme} = props;
 
-    const onPerson = (url) => {
-        props.history.push('/persons' + url);
+    const onProject = (url) => {
+        props.history.push('/projects' + url);
     };
 
     useEffect(() => {
         window.scrollTo(0, 0);
-    }, [])
+        setTheme(false);
+    }, [setTheme]);
 
     return (
         <div className='Projects'>
@@ -47,7 +48,7 @@ function Projects(props) {
                             <div>
                                 <span className="material-symbols-rounded">sdk</span>
                                 <div>
-                                    <h4 onClick={() => onPerson('/juan-andres-montoya-angulo')}>Desarrollo de un robot desactivador de explosivos dotado de un brazo de 5 grados de libertad</h4>
+                                    <h4 onClick={() => onProject('/robot-eod-5-dgl')}>Desarrollo de un robot desactivador de explosivos dotado de un brazo de 5 grados de libertad</h4>
                                     <a href='/#'>Universidad Nacional de San Agustín</a>
                                     <b> - INVESTIGADOR</b>
                                     <p>Dato importante</p>

@@ -22,7 +22,7 @@
     top: 0;
     height: 120vh;
     width: 100vw;
-    margin-top: -200px;
+    margin-top: -20.5vh;
     z-index: -1;
 }
 
@@ -112,6 +112,10 @@
 .Projects > main > section:nth-child(2) > div:nth-child(2) > .container{
     display: inline-block;
     margin: 1rem;
+    transition: all 250ms ease;
+}
+.Projects > main > section:nth-child(2) > div:nth-child(2) > .container:hover{
+    transform: scale(1.1);
 }
 
 .Projects > main > section:nth-child(2) > div:nth-child(2) > .container > div{
@@ -134,7 +138,7 @@
 
 .Projects > main > section:nth-child(2) > div:nth-child(2) > .container > div > div > h4{
     cursor: pointer;
-    transition: all 350ms ease;
+    transition: all 250ms ease;
 }
 .Projects > main > section:nth-child(2) > div:nth-child(2) > .container > div > div > h4:hover{
     opacity: .7;

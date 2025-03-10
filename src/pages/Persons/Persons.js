@@ -4,7 +4,7 @@ import portada from './../../images/investigadores.webp';
 
 
 function Persons(props) {
-    const {selectLan} = props;
+    const {selectLan, setTheme} = props;
 
     const onPerson = (url) => {
         props.history.push('/persons' + url);
@@ -12,7 +12,8 @@ function Persons(props) {
 
     useEffect(() => {
         window.scrollTo(0, 0);
-    }, [])
+        setTheme(false);
+    }, [setTheme]);
     
     return (
         <div className='Persons'>
