@@ -1,17 +1,14 @@
-import {React, useEffect, useState } from 'react';
+import {React, useState } from 'react';
 import {Link, useLocation} from 'react-router-dom';
 import './Header.css';
 import flag from './../../images/flag_peru.png';
 
 
 function Header(props) {
-    const {selectLan, onSelectLan} = props;
-    const [active, setActive] = useState( false );
+    const {selectLan, onSelectLan, setActive, active, y} = props;
     const [search, setSearch] = useState( false );
-    const [roll, setRoll] = useState( false );
     let url = useLocation().pathname;
-    const [y, setY] = useState(window.scrollY);
-
+    
     const onActive = () => {
         if(!active){
             setActive( true );
@@ -47,21 +44,9 @@ function Header(props) {
         selectLan ? alert('AI not yet implemented') : alert('IA aún no implementada');
     };
 
-    useEffect(() => {
-        const handleNavigation = (e) => {
-          // Scroll direction logic
-          setY(y+1);
-          console.log(e)
-        };
-      
-        window.addEventListener("scroll", handleNavigation);
-      
-        return () => window.removeEventListener("scroll", handleNavigation);
-      }, [y]);
-
     return (
         <div className='Header'>
-            <section className={active ? 'active' : ''}>
+            <section className={`${active ? 'active' : ''} ${y >= 10 ? 'roll' : ''}`}>
                 <div>
                     <p><img className='header-flag' src={flag} alt='flag'/>{selectLan ? 'Official website of the Peru' : 'Sitio oficial del Gobierno del Perú'}<span onClick={onActive}>{selectLan ? "here's how you know" : 'así se sabe'}</span></p>
                     <div className={active ? 'active' : ''}>
@@ -85,12 +70,12 @@ function Header(props) {
                     </div>
                 </div>
             </section>
-            <section className={active ? 'active roll' : 'roll'}>
+            <section className={`${active ? 'active' : ''} ${y >= 10 ? 'roll' : ''}`}>
                 <nav>
                     <Link to='/' style={url==='/' ? {display : 'none'} : {display : 'block'}}><div><img className='flag' src={flag} alt='flag'/><h3>{selectLan ? 'DefCRIS.gob.pe' : 'DefCRIS.gob.pe'}</h3></div></Link>
                     <Link to='/persons'><h3>{selectLan ? 'Persons' : 'Personas'}</h3></Link>
-                    <Link to='/organizations'><h3>{selectLan ? 'Organizations' : 'Organizaciones'}</h3></Link>
                     <Link to='/projects'><h3>{selectLan ? 'Projects' : 'Proyectos'}</h3></Link>
+                    <Link to='/organizations'><h3>{selectLan ? 'Organizations' : 'Organizaciones'}</h3></Link>
                     <Link to='/publications'><h3>{selectLan ? 'Publications' : 'Publicaciones'}</h3></Link>
                     {/*<Link to='/publications'><div><span className="material-symbols-rounded">menu_book</span><h3>{selectLan ? 'Publications' : 'Publicaciones'}</h3><p>15785</p></div></Link>*/}
                 </nav>

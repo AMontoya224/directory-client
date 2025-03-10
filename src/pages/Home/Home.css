@@ -1,55 +1,56 @@
-.Home > main > section{
+.Home > main{
     position: relative;
-    height: 100vh;
-    width: 100vw;
-    padding-top: 130px;
 }
 
-.Home > main > section > img{
+.Home > main > img{
     position: absolute;
-    filter: brightness(70%); 
-    top: 0;
-    height: 120vh;
+    filter: brightness(60%); 
+    top: -200px;
+    height: calc(100vh + 200px);
     width: 100vw;
-    margin-top: -200px;
     z-index: -1;
 }
 
-.Home > main > section > div{
+.Home > main > section{
+    height: 100vh;
+    width: 100vw;
+}
+
+.Home > main > section:nth-child(1){
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 20rem 3rem;
     gap: 5rem;
-    margin-top: 10rem;
 }
 
-.Home > main > section > div > div{
+.Home > main > section:nth-child(1) > div{
     width: 35vw;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.Home > main > section > div > div > img{
+.Home > main > section:nth-child(1) > div > img{
     width: 10rem;
     border-radius: 0.3rem;
 }
 
-.Home > main > section > div > div > h1{
+.Home > main > section:nth-child(1) > div > h1{
     color: var(--text-alternative);
     text-align: center;
     font-size: 4rem;
 }
 
-.Home > main > section > div > form{
+.Home > main > section:nth-child(1) > form{
     width: 35vw;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.Home > main > section > div > form > input{
+.Home > main > section:nth-child(1) > form > input{
     width: 37rem;
     height: 3rem;
     border-radius: 0.3rem;
@@ -57,10 +58,22 @@
     font-size: 1.4rem;
 }
 
-.Home > main > section > div > form > button{
+.Home > main > section:nth-child(1) > form > button{
     height: 100%;
 }
 
-.Home > main > section > div > form > button > span{
+.Home > main > section:nth-child(1) > form > button > span{
     font-size: 64px;
+}
+
+.Home > main > section:nth-child(2){
+    background: var(--background);
+}
+
+.Home > main > section:nth-child(3){
+    background: var(--gray2);
+}
+
+.Home > main > section:nth-child(4){
+    background: var(--background);
 }

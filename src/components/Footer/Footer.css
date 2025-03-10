@@ -1,0 +1,5 @@
+.Footer{
+    min-height: 30vh;
+    padding: 3rem;
+    background: var(--gray7);
+}

@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import {Switch, Route, BrowserRouter} from 'react-router-dom';
 import './App.css';
 import Header from './components/Header/Header';
@@ -15,16 +15,29 @@ import Register from './pages/Register/Register';
 
 function App() {
   const [selectLan, setSelectLan] = useState( false );
+  const [active, setActive] = useState( false );
+  const [y, setY] = useState(window.scrollY);
 
   const onSelectLan = newSelect => {
     setSelectLan( newSelect );
   };
 
+  useEffect(() => {
+    const handleNavigation = () => {
+        setY(window.scrollY);
+        if(active){
+            setActive(false);
+        }
+    };
+    window.addEventListener("scroll", handleNavigation);
+    return () => window.removeEventListener("scroll", handleNavigation);
+  }, [y, active]);
+
   return (
     <div className="App">
       <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/>
       <BrowserRouter>
-        <Header selectLan={selectLan} onSelectLan={onSelectLan}/>
+        <Header selectLan={selectLan} onSelectLan={onSelectLan} active={active} setActive={setActive} y={y}/>
         <Switch>
           <Route exact path="/" render={ routeProps => <Home selectLan={selectLan} {...routeProps} />}/>
           <Route exact path="/persons" render={ routeProps => <Persons selectLan={selectLan} {...routeProps} />}/>

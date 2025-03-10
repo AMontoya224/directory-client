@@ -1,10 +1,14 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './Persons.css';
 
 
 function PersonID(props) {
     const {selectLan} = props;
-    
+
+    useEffect(() => {
+            window.scrollTo(0, 0);
+        }, [])
+
     return (
         <div className='PersonID'>
             <title>{selectLan ? 'DefCRIS | Person' : 'DefCRIS | Persona'}</title>

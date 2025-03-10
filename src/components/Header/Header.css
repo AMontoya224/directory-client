@@ -12,9 +12,8 @@
     justify-content: space-between;
     align-items: center;
     width: 100vw;
-    height: 150px;
     transition: all 350ms ease;
-    border: var(--t);
+    z-index: 999;
 }
 
 .Header > section:first-child{
@@ -27,14 +26,19 @@
 
 .Header > section:nth-child(2){
     position: fixed;
+    height: 150px;
     top: 35px;
-    z-index: 999;
 }
+
 .Header > section:nth-child(2).active{
     top: 200px;
 }
 .Header > section:nth-child(2).roll{
-    backdrop-filter: blur(5px);
+    background: rgba(0, 0, 0, 0.7);
+    filter: none;
+    color: var(--text-alternative);
+    height: 70px;
+    top: 0;
 }
 
 .Header > section > div{
@@ -159,7 +163,7 @@
 
 .Header > section > nav > a{
     text-decoration: none;
-    color: var(--text-alternative2);
+    color: var(--text-alternative);
     transition: all 350ms ease;
 }
 .Header > section > nav > a:hover{
