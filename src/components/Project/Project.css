@@ -1,0 +1,51 @@
+.Project{
+    width: 90%;
+    height: 12rem;
+    background: var(--blue5);
+    border-radius: .1rem;
+    padding: 1rem;
+    margin: .5rem 0;
+    display: inline-block;
+    transition: all 250ms ease;
+}
+.Project:hover{
+    transform: scale(1.05);
+}
+
+.Project > main{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    gap: 2rem;
+}
+
+.Project > main > span{
+    font-size: 128px;
+    border: var(--t);
+}
+
+.Project > main > div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+    gap: 1rem;
+}
+
+.Project > main > div > h4, .Project > main > div > h5, .Project > main > div > div > p{
+    cursor: pointer;
+    color: var(--button);
+    transition: all 250ms ease;
+}
+.Project > main > div > h4:hover, .Project > main > div > h5:hover, .Project > main > div > div > p:hover{
+    color: var(--button-hover);
+}
+
+.Project > main > div > div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}

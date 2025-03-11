@@ -40,7 +40,7 @@
 .Persons > main{
     width: 65vw;
     margin-top: 35vh;
-    border-radius: .3rem;
+    border-radius: .1rem;
     background: var(--background);
 }
 
@@ -52,7 +52,7 @@
     justify-content: space-between;
     align-items: center;
     padding-bottom: 5vh;
-    border-radius: .3rem;
+    border-radius: .1rem;
 }
 
 .Persons > main > section:first-child > h1{
@@ -76,7 +76,7 @@
 .Persons > main > section:first-child > form > input{
     width: 100%;
     height: 2rem;
-    border-radius: 0.3rem;
+    border-radius: .1rem;
     padding: 1rem;
 }
 
@@ -100,8 +100,9 @@
     top: 1rem;
     left: calc(-15vw - 1rem);
     width: 15vw;
+    height: 100%;
     padding: 1rem;
-    border-radius: .2rem;
+    border-radius: .1rem;
     background: var(--background-section3);
 }
 
@@ -122,7 +123,7 @@
     width: 22rem;
     height: 12rem;
     background: var(--blue5);
-    border-radius: .3rem;
+    border-radius: .1rem;
     padding: 1rem;
     display: flex;
     flex-direction: row;
@@ -151,7 +152,75 @@
     min-height: 100vh;
     background: var(--background);
     margin-top: -12.5rem;
-    padding: 25rem 0;
+}
+
+
+.PersonID > header{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    width: 100vw;
+    height: 70vh;
+    padding: 24rem 3rem 3rem 3rem;
+    gap: 2rem;
+    background: var(--gray7);
+    border-bottom: 1px solid var(--gray5);
+}
+
+.PersonID > header > h1{
+    width: 100%;
+}
+
+.PersonID > header > div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: start;
+    gap: 2rem;
+    width: 100%;
+    height: 100%;
+}
+
+.PersonID > header > div > section{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+    height: 100%;
+}
+.PersonID > header > div > section:first-child{
+    align-items: center;
+}
+.PersonID > header > div > section:nth-child(2){
+    flex: 3;
+}
+
+.PersonID > header > div > section > span{
+    font-size: 150px;
+}
+
+.PersonID > header > div > section > p{
+    height: 12vh;
+    overflow-y: auto;
+    overflow: auto;
+}
+
+.PersonID > header > div > section > div{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.PersonID > header > div > section > div > span{
+    cursor: pointer;
+    color: var(--button);
+}
+.PersonID > header > div > section > div > span:hover{
+    color: var(--button-hover);
 }
 
 .PersonID > nav{
@@ -159,46 +228,28 @@
     justify-content: start;
     align-items: center;
     width: 100vw;
-    margin: 0 auto;
+    margin: 1.5rem auto;
 }
 
 .PersonID > nav > div{
-    flex: 1;
+    flex: 2;
     height: 3rem;
     padding: 1rem;
-    border-radius: .2rem .2rem 0 0;
+    border-radius: .1rem .1rem 0 0;
     border-bottom: 1px solid var(--gray5);
+    color: var(--button);
     cursor: pointer;
     transition: all 250ms ease;
-    color: var(--button);
 }
 .PersonID > nav > div.active{
     border: 1px solid var(--gray5);
     border-bottom: none;
 }
-.PersonID > nav > div:nth-child(2){
-    flex: 2;
-    background: var(--background);
+.PersonID > nav > div:hover{
+    color: var(--button-hover);
 }
-.PersonID > nav > div:nth-child(3){
-    flex: 2;
-    background: var(--background);
-}
-.PersonID > nav > div:nth-child(4){
-    flex: 2;
-    background: var(--background);
-}
-.PersonID > nav > div:nth-child(5){
-    flex: 2;
-    color: var(--text);
-    background: var(--gray5);
-    border: none;
-}
-.PersonID > nav > div:nth-child(6){
-    flex: 2;
-    color: var(--text);
-    background: var(--gray6);
-    border: none;
+.PersonID > nav > div:first-child, .PersonID > nav > div:nth-child(6){
+    flex: 1;
 }
 
 .PersonID > main{
@@ -215,16 +266,4 @@
 }
 .PersonID > main > section.active{
     display: block;
-}
-.PersonID > main > section:first-child{
-    background: var(--background);
-}
-.PersonID > main > section:nth-child(2){
-    background: var(--background);
-}
-.PersonID > main > section:nth-child(3){
-    background: var(--gray5);
-}
-.PersonID > main > section:nth-child(4){
-    background: var(--gray6);
 }

@@ -127,6 +127,12 @@
     visibility: visible;
 }
 
+.Header > section > div:nth-child(2) > .spc > p > span{
+    color: var(--text-alternative);
+    vertical-align: middle;
+    font-size: 18px;
+}
+
 .Header > section > div:first-child > p{
     height: 35px;
     padding-top: 10px;

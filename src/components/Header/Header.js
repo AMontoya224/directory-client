@@ -75,7 +75,7 @@ function Header(props) {
                         <button className='button-secundary' onClick={onSetting}><span className="material-symbols-rounded">settings</span></button>
                     </div>
                     <div className={active ? 'spc active' : 'spc'}>
-                        <p>Un icono de candado ( ) o https:// significa que se ha conectado de forma segura al sitio web .gob.pe</p>
+                        <p>Un icono de candado (<span class="material-symbols-rounded">lock</span>) o https:// significa que se ha conectado de forma segura al sitio web .gob.pe</p>
                     </div>
                 </div>
             </section>
