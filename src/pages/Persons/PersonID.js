@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import './Persons.css';
+import Project from '../../components/Project/Project';
 
 
 function PersonID(props) {
